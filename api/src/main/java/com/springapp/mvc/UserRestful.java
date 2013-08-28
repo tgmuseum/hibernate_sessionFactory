@@ -106,7 +106,18 @@ public class UserRestful {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 */
+            /*
+               <<<<<<<<<< TEST PROCEDURE >>>>>>>>>>
 
+               CREATE OR REPLACE PROCEDURE TESTPROC7
+                (
+                    vid IN ACCOUNT.ID%TYPE
+                )
+                IS
+                BEGIN
+                    UPDATE ACCOUNT SET email='test@co.k.r' WHERE ID=vid;
+                END;
+            */
         try {
             Query query = entityManager.createNativeQuery("call TESTPROC7(?)");
             query.setParameter(1, 2);
