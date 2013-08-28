@@ -46,8 +46,7 @@ public class HelloController {
             System.out.println(list.get(i).getId());
         }
         */
-        //return "thymeleaf.html";
-        return "thymeleaf.html";
+        return "thymeleaf";
     }
 
     /**
