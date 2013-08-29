@@ -101,7 +101,8 @@ public class HelloController {
     public String testOracle(ModelMap model) {
 
         try {
-            Query query = oracleEntityManager.createNativeQuery("call TESTPROC7(?)");
+            //Query query = oracleEntityManager.createNativeQuery("call TESTPROC7(?)");
+            Query query = oracleEntityManager.createNamedQuery("CALL_ORACLE_TESTPROC");
             query.setParameter(1, 2);
             query.executeUpdate();
 

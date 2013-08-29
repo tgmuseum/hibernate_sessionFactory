@@ -8,6 +8,7 @@
     <persistence-unit name="oracleUnit" transaction-type="RESOURCE_LOCAL"><!-- for local testing use: RESOURCE_LOCAL -->
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <!--<jta-data-source>java:comp/env/jdbc/web</jta-data-source>-->
+        <mapping-file>orm/sql.xml</mapping-file>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
             <!-- value="create" to build a new database on each run; value="update" to modify an existing database; value="create-drop" means the same as "create" but also drops tables when Hibernate closes; value="validate" makes no changes to the database -->
